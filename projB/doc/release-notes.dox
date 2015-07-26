@@ -1,0 +1,64 @@
+/**
+@page Release_Notes Release Notes
+	@section TABLE_OF_CONTENTS TABLE OF CONTENTS
+	-# @ref INTRODUCTION
+		-# @ref Features
+	-# @ref New_in_this_release
+		-# @ref New_Features
+		-# @ref Enhancements
+		-# @ref Optimizations
+		-# @ref Examples
+		-# @ref Tools
+		-# @ref API_Changes
+		-# @ref Documentation
+		-# @ref Bug_Fixes
+		-# @ref Known_Bugs
+	-# @ref Errata
+		
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section INTRODUCTION INTRODUCTION
+		@subsection Features Features
+			- The latest release of [PRODUCT_NAME]  provides the following major features and improvements:
+				- Feature 1
+				- Feature 2
+
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section New_in_this_release New in this release
+	
+		@subsection New_Features New Features
+			- Feature 1 Explained
+			- Feature 2 Explained
+			
+		@subsection Enhancements Enhancements
+			- Enhancements
+			
+		@subsection Optimizations Optimizations
+			- Optimizations
+			
+		@subsection Examples Examples
+			- Examples
+			
+		@subsection Tools Tools
+			- Tools
+			
+		@subsection API_Changes API Changes
+			- API Changes
+			
+		@subsection Documentation Documentation
+			- Documentation
+			
+		@subsection Bug_Fixes Bug Fixes
+			- Bug Fixes
+			
+		@subsection Known_Bugs Known Bugs
+			- Known Bugs
+
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section Errata
+*/

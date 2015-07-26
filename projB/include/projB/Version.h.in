@@ -1,5 +1,5 @@
 ///
-/// @file    projA/Version.h
+/// @file    Version.h
 /// @brief   Report the version for this package.
 /// @author  Barthélémy von Haller
 ///
@@ -10,7 +10,7 @@
 #include <string>
 
 namespace ProjectTemplate {
-namespace ProjA {
+namespace ProjB {
 /// The current major version.
 #define HELLO_VERSION_MAJOR @VERSION_MAJOR@
 
@@ -47,25 +47,25 @@ namespace ProjA {
    (HELLO_VERSION_MAJOR ==                    \
     MAJOR&&(HELLO_VERSION_MINOR < MINOR || (HELLO_VERSION_MINOR == MINOR&& HELLO_VERSION_PATCH <= PATCH))))
 
-/// Information about the current ProjA version.
+/// Information about the current ProjB version.
 class Version {
 public:
-  /// @return the current major version of ProjA.
+  /// @return the current major version of ProjB.
   static int getMajor();
 
-  /// @return the current minor version of ProjA.
+  /// @return the current minor version of ProjB.
   static int getMinor();
 
-  /// @return the current patch level of ProjA.
+  /// @return the current patch level of ProjB.
   static int getPatch();
 
-  /// @return the current ProjA version (MM.mm.pp).
+  /// @return the current ProjB version (MM.mm.pp).
   static std::string getString();
 
   /// @return the SVN revision.
   static int getRevision();
 
-  /// @return the current ProjA version plus the SVN revision (MM.mm.pp.rev).
+  /// @return the current ProjB version plus the SVN revision (MM.mm.pp.rev).
   static std::string getRevString();
 };
 }
