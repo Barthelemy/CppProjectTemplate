@@ -7,9 +7,9 @@
 set(CPACK_PACKAGE_NAME "ProjA${VERSION_MAJOR}")
 
 if(APPLE)
-  set(CPACK_PACKAGE_VENDOR "ALICE") # PackageMaker doesn't like http://
+  set(CPACK_PACKAGE_VENDOR "Organisation") # PackageMaker doesn't like http://
 else()
-  set(CPACK_PACKAGE_VENDOR "http://aliceinfo.cern.ch") # deb lintian insists on URL
+  set(CPACK_PACKAGE_VENDOR "http://example.com") # deb lintian insists on URL
 endif()
 
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Example project")
