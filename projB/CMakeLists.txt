@@ -57,8 +57,8 @@ find_package(Boost COMPONENTS unit_test_framework program_options REQUIRED)
 # just add them in this list (after a space), or add an include_directories statement in a
 # subdirectory's CMakeLists.
 include_directories(
-    ${projB_SOURCE_DIR}/include
-    ${projB_BINARY_DIR}/include   # add the binary tree to the search path so that we will find Version.h
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_BINARY_DIR}/include   # add the binary tree to the search path so that we will find Version.h
     ${Boost_INCLUDE_DIRS}
 )
 
