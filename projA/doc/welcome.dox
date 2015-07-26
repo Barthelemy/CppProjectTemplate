@@ -1,0 +1,22 @@
+/*
+        CERN - ALICE
+        (c) 2015-2020. All rights reserved.
+
+        Responsible authors:    [NAME]
+*/
+
+// doxygen documentation ______________________________________________________
+
+/*!
+
+@mainpage Documentation
+
+This document contains a technical introduction to [PRODUCT_NAME]. It is designed to help readers with technical skills such as developers, testers or others get a starting point into [PRODUCT_NAME].
+
+The document has three sections:
+
+- @subpage User_Guide
+- @subpage Technical_Overview
+- @subpage Release_Notes
+
+*/

@@ -1,0 +1,34 @@
+
+Versionining allows the identification and coexistence of different
+iterations of a product on a single install location. It is particularly
+important for packages containing header files or libraries to be used
+by other packages. This template uses the following approach:
+
+* Major versions are not compatible with each other
+* Minor versions are source compatible, but not binary compatible
+* Patch versions are source and binary compatible
+
+
+In consequence, this means for C++ libraries:
+
+* Any modification of the existing API requires a new major version
+* Any addition to the existing API or any change on the member variables
+  of an installed header require at least a new minor version
+* Patch releases have to implemented without touching header files,
+  with a few exceptions if you know what you are doing
+
+Libraries with a C API are source and binary compatible as long as the C
+functions and structs are unchanged.
+
+
+To ensure coexistence of different version on the same installation
+root, the following layout is used:
+
+<install_dir>/bin/<appname>-<major_version>
+<install_dir>/include/<libname><major_version>/*.h
+<install_dir>/lib/lib<name>.so.<major_version><minor_version>
+<install_dir>/share/<product>-<major_version>/<data_files>
+
+Symlinks to the non-versioned name are created, that is, the last
+installed version of a package will be the one found if unversioned
+includes are used.

@@ -1,0 +1,88 @@
+
+/**
+@page Technical_Overview Technical Overview
+	@section TECHNICAL_OVERVIEW_TABLE_OF_CONTENTS TABLE OF CONTENTS
+	-# @ref INTRODUCTION
+		-# @ref Overview
+		-# @ref Version
+		-# @ref Status
+		-# @ref Requirements
+		-# @ref Dependencies
+		-# @ref Acronyms_and_Abbreviations
+	-# @ref DESIGN
+		-# @ref Design_Overview
+		-# @ref System_Architecture
+		-# @ref Alternative_Designs
+		-# @ref Interface_Description
+	-# @ref COMPONENTS
+		-# @ref Component1
+		-# @ref Component2
+	-# @ref ADDITIONAL_MATERIAL
+	-# @ref ISSUES
+		-# @ref Issue1
+		-# @ref Issue2
+		
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section TECHNICAL_OVERVIEW_INTRODUCTION INTRODUCTION
+		@subsection Overview Overview
+			- Brief overview of the [PRODUCT_NAME]			
+		@subsection Version Version
+			- Version
+		@subsection Status Status
+			- Describe the current status, e.g.: Prototype, Under Development, etc…
+
+		@subsection Requirements Requirements
+			- List any requirements here
+			
+		@subsection Dependencies Dependencies
+			- List any dependencies here
+			
+		@subsection Acronyms_and_Abbreviations Acronyms and Abbreviations
+			- Provide a list of the acronyms and abbreviations used in this document and the meaning of each.
+
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section DESIGN SYSTEM ARCHITECTURAL DESIGN
+		@subsection Design_Overview Design Overview
+			- High-level design overview (process view)		
+			@dot
+				digraph Process {
+					node [shape=box];
+					Step1 -> Step2 -> Step3;
+			  }
+			@enddot
+		@subsection System_Architecture System Architecture
+			- Detailed system architecture description
+		@subsection Alternative_Designs Discussion of Alternative Designs
+			- Alternative system architecture discussion
+		@subsection Interface_Description System Interface Description
+			- Interface description
+
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section COMPONENTS DETAILED DESCRIPTION OF COMPONENTS
+		@subsection Component1 Component-n
+		@subsection Component2 Component-n+1
+
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section ADDITIONAL_MATERIAL ADDITIONAL MATERIAL
+	
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section ISSUES ISSUES
+		@subsection Issue1 Issue #1
+			- Discussion
+			- Resolution
+			
+		@subsection Issue2 Issue #2
+			- Discussion
+			- Resolution
+	
+*/

@@ -1,0 +1,118 @@
+
+/**
+@page User_Guide User Guide
+
+	@section USER_GUIDE_TABLE_OF_CONTENTS TABLE OF CONTENTS
+	-# @ref GENERAL_INFORMATION
+		-# @ref Overview
+		-# @ref Acronyms_and_Abbreviations
+	-# @ref SETUP_AND_DATA_FLOWS
+		-# @ref Setup
+		-# @ref Data_Flows
+	-# @ref INSTALLATION_AND_UPGRADE
+		-# @ref Requirements
+		-# @ref Supported_Platforms
+		-# @ref Installation
+		-# @ref Upgrading
+		-# @ref Important_Files
+		-# @ref Tips_And_Tricks
+	-# @ref GETTING_STARTED
+		-# @ref Starting
+		-# @ref Running
+		-# @ref Exiting
+		-# @ref Exceptions
+		
+	@htmlonly
+	<hr>
+	@endhtmlonly		
+	@section GENERAL_INFORMATION GENERAL INFORMATION
+	
+		@subsection USER_GUIDE_Overview Overview
+		
+			- Explain in general terms the tool and the purpose for which it is intended. The description shall include:
+				- Architecture of the tool in non-technical terms, (e.g., library, client/server, web-based, etc.)
+				- Major functions performed by the tool
+				- Status (Operational, Under Development, Undergoing a major modification, etc...)
+			
+		@subsection USER_GUIDE_Acronyms_and_Abbreviations Acronyms and Abbreviations
+		
+			- Provide a list of the acronyms and abbreviations used in this document and the meaning of each.
+
+	@htmlonly
+	<hr>
+	@endhtmlonly
+	@section SETUP_AND_DATA_FLOWS SETUP AND DATA FLOWS
+	
+		@subsection Setup Setup
+		
+			- Briefly describe and depict graphically the setup (computers, servers, databases, etc...) used by the tool.
+			
+		@subsection Data_Flows Data Flows
+		
+			- Briefly describe the overall flow of data in the system (data inputs and outputs).
+							
+			@dot
+				digraph Data {
+					node [shape=box];
+					Input1 -> Process;
+					Input2 -> Process;
+					Process -> Output1;
+					Process -> Output2;
+			  }
+			@enddot
+				
+	@htmlonly
+	<hr>
+	@endhtmlonly
+	@section INSTALLATION_AND_UPGRADE INSTALLATION AND UPGRADE
+	
+		@subsection USER_GUIDE_Requirements Requirements
+		
+			- List prerequisites (if any) here
+			
+		@subsection Supported_Platforms Supported Platforms
+		
+			- List supported platforms here
+		
+		@subsection Installation Installation
+		
+			- Linux
+			- Mac OS X
+			- Windows
+					
+		@subsection Upgrading Upgrading
+		
+			- Upgrading Manually
+			- Rolling Back an Upgrade
+			
+		@subsection Important_Files Important Directories and Files
+		
+			- List all important files and directories here
+		
+		@subsection  Tips_And_Tricks Tips, Tricks, and Best Practices
+		
+			- Add tips and tricks here (if any))
+	
+	@htmlonly
+	<hr>
+	@endhtmlonly
+	@section GETTING_STARTED GETTING STARTED
+		
+		- This section should provide a general walkthrough from tool initiation through exit. The logical arrangement of the information should enable others to understand the sequence and flow of the system.
+		
+		@subsection Starting Starting
+		
+			- Describe the procedures necessary to access the tool.
+		
+		@subsection Running Running
+		
+			- Describe the procedures necessary to run the tool.
+		
+		@subsection Exiting Exiting
+		
+			- Describe the actions necessary to properly exit the tool.
+		
+		@subsection Exceptions Caveats and Exceptions
+		
+				- If there are special actions the user must take to insure that data is properly saved or that some other function executes properly, describe those actions here.  
+*/
