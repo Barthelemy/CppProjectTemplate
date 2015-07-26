@@ -13,7 +13,7 @@ else()
 endif()
 
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Example project")
-set(CPACK_PACKAGE_CONTACT "Barthelemy von Haller <barthelemy.von.haller@cern.ch>")
+set(CPACK_PACKAGE_CONTACT "Person name <name@example.com>")
 set(CPACK_PACKAGE_VERSION ${VERSION})
 set(CPACK_PACKAGE_VERSION_MAJOR ${VERSION_MAJOR})
 set(CPACK_PACKAGE_VERSION_MINOR ${VERSION_MINOR})
