@@ -69,7 +69,7 @@ set(CMAKE_MACOSX_RPATH ON)
 #set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 #set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-enable_testing() # needed on top-level CMakeLists.txt
+enable_testing()
 add_subdirectory(include)
 add_subdirectory(src)
 add_subdirectory(doc)

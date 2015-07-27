@@ -5,6 +5,8 @@
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+enable_testing() # needed on top-level CMakeLists.txt
+
 add_subdirectory(projA)
 add_subdirectory(projB)
 
@@ -15,6 +17,3 @@ add_subdirectory(projB)
 # We define as well a function AddDocTarget in cmake/DoxygenTarget.cmake
 add_custom_target(doc) # DEPENDS docProjA docProjB) Note: with CMake 3.X the DEPENDS would work
 ADD_DEPENDENCIES(doc docProjA docProjB)
-
-# Target test definition
-#add_custom_target(test)
