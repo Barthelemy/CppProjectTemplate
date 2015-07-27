@@ -1,7 +1,7 @@
 # @author  Barthélémy von Haller
 set(LIB_HEADERS
-  "${CMAKE_CURRENT_BINARY_DIR}/../include/projA/Version.h"
-  World.h
+  "${CMAKE_CURRENT_BINARY_DIR}/../include/projA/Version.h" # Generated header
+  ../include/projA/World.h # Normal header
 )
 
 set(LIB_SOURCES
