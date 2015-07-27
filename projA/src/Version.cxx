@@ -32,7 +32,7 @@ std::string Version::getString()
   return version.str();
 }
 
-int Version::getRevision()
+std::string Version::getRevision()
 {
   return HELLO_VCS_REVISION;
 }
