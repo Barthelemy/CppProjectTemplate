@@ -39,9 +39,10 @@ target_link_libraries(${APPLICATION_NAME} ${LIBRARY_NAME} ${Boost_PROGRAM_OPTION
 
 # Says how and where to install software
 install(TARGETS ${LIBRARY_NAME} ${APPLICATION_NAME}
+  EXPORT ${PROJECT_NAME}Targets            # for downstream dependencies
   ARCHIVE DESTINATION lib COMPONENT libs   # static lib
-  RUNTIME DESTINATION bin COMPONENT libs  # binaries
-  LIBRARY DESTINATION lib COMPONENT libs  # shared lib
+  RUNTIME DESTINATION bin COMPONENT libs   # binaries
+  LIBRARY DESTINATION lib COMPONENT libs   # shared lib
   PUBLIC_HEADER DESTINATION include/${PROJECT_NAME} COMPONENT dev   # headers (note the different component -> different package)
   FRAMEWORK DESTINATION bin COMPONENT libs # for mac
 )

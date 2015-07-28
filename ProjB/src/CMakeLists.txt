@@ -30,6 +30,9 @@ set_target_properties(${LIBRARY_NAME} PROPERTIES
   PUBLIC_HEADER "${LIB_HEADERS}" # specify the public headers
 )
 
+# Links the target library against the library (libprojBA)
+target_link_libraries(${LIBRARY_NAME} ProjA)
+
 # This is a make target, so you can do a "make projBrunner"
 set(APPLICATION_NAME projBrunner)
 add_executable(${APPLICATION_NAME} ${APP_SOURCES})
@@ -39,10 +42,11 @@ target_link_libraries(${APPLICATION_NAME} ${LIBRARY_NAME} ${Boost_PROGRAM_OPTION
 
 # Says how and where to install software
 install(TARGETS ${LIBRARY_NAME} ${APPLICATION_NAME}
+  EXPORT ${PROJECT_NAME}Targets            # for downstream dependencies
   ARCHIVE DESTINATION lib COMPONENT libs   # static lib
   RUNTIME DESTINATION bin COMPONENT libs   # binaries
   LIBRARY DESTINATION lib COMPONENT libs   # shared lib
-  PUBLIC_HEADER DESTINATION ${PROJECT_NAME}/ProjB COMPONENT dev   # headers (note the different component -> different package)
+  PUBLIC_HEADER DESTINATION include/${PROJECT_NAME} COMPONENT dev   # headers (note the different component -> different package)
   FRAMEWORK DESTINATION bin COMPONENT libs # for mac
 )
 

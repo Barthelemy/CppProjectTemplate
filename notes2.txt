@@ -1,0 +1,14 @@
+http://www.cmake.org/pipermail/cmake/2012-May/050099.html
+
+http://www.cmake.org/cmake/help/git-master/manual/cmake-packages.7.html
+
+http://stackoverflow.com/questions/20746936/cmake-of-what-use-is-find-package-if-you-need-to-specify-cmake-module-path-an
+
+https://github.com/forexample/package-example
+
+https://github.com/scumm/foobar
+
+test make package
+write README
+Comments
+Test with two repos (projC and projD)

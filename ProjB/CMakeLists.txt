@@ -52,6 +52,11 @@ endif()
 set(Boost_NO_BOOST_CMAKE ON) #  Don't do a find_package in config mode before searching for a regular boost install.
 find_package(Boost COMPONENTS unit_test_framework program_options REQUIRED)
 
+# Find ProjA if we are compiling only ProjB
+if(NOT TARGET ProjA)
+  find_package(ProjA CONFIG REQUIRED)
+endif()
+
 # This sets the include directory for the reference project. This is the -I flag in gcc.
 # All the includes should be in this variable To add new directories to the include path,
 # just add them in this list (after a space), or add an include_directories statement in a
@@ -75,9 +80,41 @@ add_subdirectory(src)
 add_subdirectory(doc)
 add_subdirectory(test)
 
-
-# PACKAGING
+#
+# SYSTEM PACKAGING
 # _____________________________________________________________________________
 
 include(CPackConfig)
 
+#
+# CMAKE PACKAGING
+# _____________________________________________________________________________
+
+# Include needed for 'write_basic_package_version_file'
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file(
+  "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake"
+  VERSION ${VERSION}
+  COMPATIBILITY AnyNewerVersion
+)
+
+configure_file(cmake/${PROJECT_NAME}Config.cmake
+  "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}Config.cmake"
+  COPYONLY
+)
+
+set(ConfigPackageLocation lib/cmake/${PROJECT_NAME})
+
+install(
+  EXPORT ${PROJECT_NAME}Targets
+  DESTINATION ${ConfigPackageLocation}
+)
+
+install(
+  FILES
+    cmake/${PROJECT_NAME}Config.cmake
+    "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake"
+  DESTINATION ${ConfigPackageLocation}
+  COMPONENT dev
+)
