@@ -3,16 +3,16 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <projA/World.h>
+#include <ProjB/World.h>
 
 #include <iostream>
 
 namespace ProjectTemplate {
-namespace ProjA {
+namespace ProjB {
 
 void World::greet()
 {
-  std::cout << "ProjA world!!" << std::endl;
+  std::cout << "ProjB world!!" << std::endl;
 }
 
 int World::returnsN(int n)
@@ -23,5 +23,5 @@ int World::returnsN(int n)
   return n;
 }
 
-} // namespace ProjA
+} // namespace ProjB
 } // namespace ProjectTemplate

@@ -8,7 +8,7 @@ set(ALL_TESTS)
 foreach(FILE ${TEST_FILES})
     string(REGEX REPLACE "[./]" "_" NAME ${FILE}) # create exe name
     add_executable(${NAME} ${FILE})
-    target_link_libraries(${NAME} projA ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}) # link against our lib and boost test
+    target_link_libraries(${NAME} ProjB ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}) # link against our lib and boost test
     add_test(NAME ${NAME} COMMAND ${NAME})                              # this is how to add tests to CMake
 endforeach(FILE ${TEST_FILES})
 

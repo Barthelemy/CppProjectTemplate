@@ -15,5 +15,5 @@ enable_testing() # needed on top-level CMakeLists.txt
 add_custom_target(doc) # DEPENDS docProjA docProjB) Note: with CMake 3.X the DEPENDS would work
 ADD_DEPENDENCIES(doc docProjA docProjB)
 
-add_subdirectory(projA)
-add_subdirectory(projB)
+add_subdirectory(ProjA)
+add_subdirectory(ProjB)

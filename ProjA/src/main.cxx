@@ -3,8 +3,8 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <projB/World.h>
-#include <projB/Version.h>
+#include <ProjA/World.h>
+#include <ProjA/Version.h>
 #include <boost/program_options.hpp>
 #include <iostream>
 
@@ -26,17 +26,17 @@ int main(int argc, char* argv[])
   }
   // version
   if (vm.count("version")) {
-    std::cout << "HelloRunner version " << ProjectTemplate::ProjB::Version::getString() << std::endl;
+    std::cout << "HelloRunner version " << ProjectTemplate::ProjA::Version::getString() << std::endl;
     return EXIT_SUCCESS;
   }
   // rev
   if (vm.count("rev")) {
-    std::cout << "SVN revision : " << ProjectTemplate::ProjB::Version::getRevision() << std::endl;
+    std::cout << "SVN revision : " << ProjectTemplate::ProjA::Version::getRevision() << std::endl;
     return EXIT_SUCCESS;
   }
 
   // Actual "work"
-  ProjectTemplate::ProjB::World hello;
+  ProjectTemplate::ProjA::World hello;
   hello.greet();
 
   return EXIT_SUCCESS;

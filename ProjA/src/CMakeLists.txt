@@ -1,7 +1,7 @@
 # @author  Barthélémy von Haller
 set(LIB_HEADERS
-  "${CMAKE_CURRENT_BINARY_DIR}/../include/projB/Version.h"
-  ../include/projB/World.h
+  "${CMAKE_CURRENT_BINARY_DIR}/../include/ProjA/Version.h" # Generated header
+  ../include/ProjA/World.h # Normal header
 )
 
 set(LIB_SOURCES
@@ -17,7 +17,7 @@ set(APP_SOURCES
 )
 
 # Define two variables in order not to repeat ourselves.
-set(LIBRARY_NAME projB)
+set(LIBRARY_NAME ProjA)
 
 # Define the library
 add_library(${LIBRARY_NAME} SHARED ${LIB_SOURCES})
@@ -30,19 +30,19 @@ set_target_properties(${LIBRARY_NAME} PROPERTIES
   PUBLIC_HEADER "${LIB_HEADERS}" # specify the public headers
 )
 
-# This is a make target, so you can do a "make projBrunner"
-set(APPLICATION_NAME projBrunner)
+# This is a make target, so you can do a "make projArunner"
+set(APPLICATION_NAME projArunner)
 add_executable(${APPLICATION_NAME} ${APP_SOURCES})
 
-# Links the target exe (projBrunner) against the library (libprojB) and other required libraries
+# Links the target exe (projArunner) against the library (libprojA) and other required libraries
 target_link_libraries(${APPLICATION_NAME} ${LIBRARY_NAME} ${Boost_PROGRAM_OPTIONS_LIBRARY})
 
 # Says how and where to install software
 install(TARGETS ${LIBRARY_NAME} ${APPLICATION_NAME}
   ARCHIVE DESTINATION lib COMPONENT libs   # static lib
-  RUNTIME DESTINATION bin COMPONENT libs   # binaries
-  LIBRARY DESTINATION lib COMPONENT libs   # shared lib
-  PUBLIC_HEADER DESTINATION include/projB COMPONENT dev   # headers (note the different component -> different package)
+  RUNTIME DESTINATION bin COMPONENT libs  # binaries
+  LIBRARY DESTINATION lib COMPONENT libs  # shared lib
+  PUBLIC_HEADER DESTINATION include/${PROJECT_NAME} COMPONENT dev   # headers (note the different component -> different package)
   FRAMEWORK DESTINATION bin COMPONENT libs # for mac
 )
 

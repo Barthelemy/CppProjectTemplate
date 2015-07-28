@@ -4,7 +4,7 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <projA/Version.h>
+#include <ProjA/Version.h>
 #include <sstream>
 
 namespace ProjectTemplate {

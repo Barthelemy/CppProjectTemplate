@@ -3,7 +3,7 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <projA/World.h>
+#include <ProjB/World.h>
 
 #define BOOST_TEST_MODULE hello test
 #define BOOST_TEST_MAIN
@@ -22,7 +22,7 @@ BOOST_AUTO_TEST_CASE(arithmetic_test)
 
 BOOST_AUTO_TEST_CASE(hello_test)
 {
-  ProjectTemplate::ProjA::World world;
+  ProjectTemplate::ProjB::World world;
   const int ret = world.returnsN(3);
   BOOST_CHECK_EQUAL(ret, 3);
 }
