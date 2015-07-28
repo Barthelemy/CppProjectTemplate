@@ -1,0 +1,106 @@
+For any question, please contact: 
+Barthélémy von Haller (barthelemy.von.haller@cern.ch)
+
+This project demonstrate the usage of CMake, boost's test and option parsing and 
+doxygen. It is not the simplest example ever as we try to show how to use them 
+in a proper non-minimalistic way.
+
+0. Requirements
+    - doxygen: http://www.stack.nl/~dimitri/doxygen/
+    - graphviz: http://www.graphviz.org/
+    - cmake
+    - ccmake
+    - boost
+
+1. CMake
+    CMake(www.cmake.org) is the make tool we use in this project. 
+    Its config file is a plain text file called CMakeLists.txt. 
+    You will find a sample one right next to this README. It is commented heavily for reference.
+
+    * The cmake way *
+    
+    The commands to build the project would be:
+      mkdir build_dir
+      cd build_dir
+      cmake .. 
+      make 
+      make install
+      
+    * Advanced way *
+
+    To use it run "ccmake .." in the top
+    directory of the project. Then turn on the options that you want by
+    going up and down with arrows, hitting "enter" to edit values and hitting
+    it again to exit edition. 
+    For example, you might want to enable building documentation for the
+    sample project. Then press "c" followed by "g" to generate a
+    makefile. It will bring you back to the terminal. Then type "make"
+    
+    One can also pass parameters to cmake when configuring it using "-DMY_VARIABLE VALUE".
+    For example to build a debug version or a release version with debug symbols could look like : 
+    ccmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+    ccmake -DCMAKE_BUILD_TYPE=Debug ..
+
+2. Docs (Doxygen)
+
+    There is a default doc target in the CMakeLists.txt, which is built
+    in as a default target or when you type "make doc" You must have doxygen
+    installed on your system for this to work. See hello.h in the
+    include directory for hints on how to write doxygen comments.
+    You can customize the output by editing config files in the doc directory.
+
+    Documentation is being placed in: BUILD_DIR/doc
+    BUILD_DIR is the build in which you say "make"
+
+3. Tests
+
+    There are 2 dummy tests defined in the CMakeLists.txt. The unit test
+    source is in the test directory.  To run the dummy test, do "make
+    test".
+
+4. Project Organization
+
+    Source and header files are grouped by component, namely libs and apps
+    (files to build the library, files to build the executable).
+    
+5. Boost
+
+    We include boost in the CMakeLists.txt using find_package(Boost ...) and 
+    passing a list of components we intend to use, namely unit_test_framework 
+    and program_options. 
+    
+    The former is to ease the development of unit tests and the latter is 
+    to help getting options for your binaries. See apps/hellorunner/main.cxx 
+    for an example. 
+    
+6. SVN and Git
+
+    The project shows how to use Git or SVN revision number. In the main 
+    CMakeLists.txt we include one or the other by commenting and uncommenting
+    the corresponding lines. It will define a CMake variable
+    that will be used when generating libs/hello/Version.h.
+
+    GetGitRevisionDescription module has been added to the CMake folder in the 
+    "CMake" directory in order to retreive branch and revision information 
+    from Git repository. Starting with Git 1.9 the module will be part of 
+    official cMake distribution, until then it has to be part of the 
+    application.
+    
+7. Packaging
+
+    CPack permits building packages based on CMake. One should add CPackConfig
+    as it is done in the last line of the CMakeLists.txt. CPackConfig.cmake 
+    is in CMake folder and contains the required variables. 
+    If you do "make package" it will create a tarball, a .deb and an rpm. 
+
+8. Remarks
+
+    CMake is cross-platforms. Thus there are commands that might be there 
+    only to be compatible with one or the other platforms. In this project
+    we focus on Linux and removed most of these specificities for sake 
+    of simplicity.
+    
+9. Resources
+
+    CMake commands - http://www.cmake.org/cmake/help/v2.8.8/cmake.html
+    CMake tutorial - http://www.cmake.org/cmake/help/cmake_tutorial.html
