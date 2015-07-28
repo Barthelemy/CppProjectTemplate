@@ -18,6 +18,6 @@ function(PrepareDocTarget)
 
   make_directory(${CMAKE_CURRENT_BINARY_DIR}/html) # needed for install
 
-  install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION share/${PROJECT_NAME}-${VERSION_MAJOR} COMPONENT docs)
+  install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION share/${PROJECT_NAME}-${VERSION_MAJOR} COMPONENT doc)
 
 endfunction()

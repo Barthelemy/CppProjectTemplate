@@ -116,5 +116,5 @@ install(
     cmake/${PROJECT_NAME}Config.cmake
     "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake"
   DESTINATION ${ConfigPackageLocation}
-  COMPONENT dev
+  COMPONENT devel
 )

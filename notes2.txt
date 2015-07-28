@@ -8,7 +8,10 @@ https://github.com/forexample/package-example
 
 https://github.com/scumm/foobar
 
+extract stuff for configuration files
 test make package
-write README
+write README (Structure, dependencies (ext and int), what do the projects do and produce, what can be done like
+[parallel] build, test, package, doc and from where, implementation details, packaging differences between A and B,
+platforms on which it was tested)
 Comments
 Test with two repos (projC and projD)
