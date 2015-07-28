@@ -7,9 +7,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 enable_testing() # needed on top-level CMakeLists.txt
 
-add_subdirectory(projA)
-add_subdirectory(projB)
-
 # Target doc definition
 # The challenge here is that the sub projects must all define a custom target but with different names to avoid
 # conflicts. We also want to be able to issue "make doc" from the top dir while being able to issue "make doc"
@@ -17,3 +14,6 @@ add_subdirectory(projB)
 # We define as well a function AddDocTarget in cmake/DoxygenTarget.cmake
 add_custom_target(doc) # DEPENDS docProjA docProjB) Note: with CMake 3.X the DEPENDS would work
 ADD_DEPENDENCIES(doc docProjA docProjB)
+
+add_subdirectory(projA)
+add_subdirectory(projB)
