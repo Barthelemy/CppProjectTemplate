@@ -76,40 +76,13 @@ add_subdirectory(doc)
 add_subdirectory(test)
 
 #
-# SYSTEM PACKAGING
+# SYSTEM PACKAGING (RPM, TGZ, ...)
 # _____________________________________________________________________________
 
 include(CPackConfig)
 
 #
-# CMAKE PACKAGING
+# CMAKE PACKAGING (for other CMake projects to use this one easily)
 # _____________________________________________________________________________
 
-# Include needed for 'write_basic_package_version_file'
-include(CMakePackageConfigHelpers)
-
-write_basic_package_version_file(
-  "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake"
-  VERSION ${VERSION}
-  COMPATIBILITY AnyNewerVersion
-)
-
-configure_file(cmake/${PROJECT_NAME}Config.cmake
-  "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}Config.cmake"
-  COPYONLY
-)
-
-set(ConfigPackageLocation lib/cmake/${PROJECT_NAME})
-
-install(
-  EXPORT ${PROJECT_NAME}Targets
-  DESTINATION ${ConfigPackageLocation}
-)
-
-install(
-  FILES
-    cmake/${PROJECT_NAME}Config.cmake
-    "${CMAKE_CURRENT_BINARY_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake"
-  DESTINATION ${ConfigPackageLocation}
-  COMPONENT devel
-)
+include(PackageConfigurator)
