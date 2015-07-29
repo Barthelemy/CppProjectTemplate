@@ -9,11 +9,5 @@ https://github.com/forexample/package-example
 https://github.com/scumm/foobar
 
 test make package -> doesn't work from top dir
-write README (what do the projects do and produce, what can be done like
-[parallel] build, test, package, doc and from where, implementation details, packaging differences between A and B,
-platforms on which it was tested)
-Comments
 Test with two repos (projC and projD)
 lgpl
-in test folder there are many targets created
-could we extract Version.h.in ?
