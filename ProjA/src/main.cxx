@@ -3,8 +3,8 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <ProjA/World.h>
-#include <ProjA/Version.h>
+#include "ProjA/World.h"
+#include "ProjA/Version.h"
 #include <boost/program_options.hpp>
 #include <iostream>
 

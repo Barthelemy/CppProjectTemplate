@@ -3,7 +3,7 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <ProjB/World.h>
+#include "ProjB/World.h"
 
 #include <iostream>
 

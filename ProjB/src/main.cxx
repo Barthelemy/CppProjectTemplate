@@ -3,8 +3,8 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <ProjB/World.h>
-#include <ProjB/Version.h>
+#include "ProjB/World.h"
+#include "ProjB/Version.h"
 #include <boost/program_options.hpp>
 #include <iostream>
 

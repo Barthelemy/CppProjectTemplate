@@ -3,7 +3,7 @@
 /// @author  Barthelemy von Haller
 ///
 
-#include <ProjA/World.h>
+#include "ProjA/World.h"
 
 #define BOOST_TEST_MODULE hello test
 #define BOOST_TEST_MAIN
