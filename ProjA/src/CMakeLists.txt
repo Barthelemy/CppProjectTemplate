@@ -5,7 +5,6 @@ set(LIB_HEADERS
 )
 
 set(LIB_SOURCES
-  Version.cxx
   World.cxx
 )
 

@@ -8,6 +8,7 @@
 #define PROJECT_TEMPLATE_HELLO_VERSION_H
 
 #include <string>
+#include <sstream>
 
 namespace ProjectTemplate {
 namespace ProjA {
@@ -50,23 +51,45 @@ namespace ProjA {
 /// Information about the current ProjA version.
 class Version {
 public:
-  /// @return the current major version of ProjA.
-  static int getMajor();
+  /// @return the current major version of ProjB.
+  static int getMajor()
+  {
+    return HELLO_VERSION_MAJOR;
+  }
 
-  /// @return the current minor version of ProjA.
-  static int getMinor();
+  /// @return the current minor version of ProjB.
+  static int getMinor()
+  {
+    return HELLO_VERSION_MINOR;
+  }
 
-  /// @return the current patch level of ProjA.
-  static int getPatch();
+  /// @return the current patch level of ProjB.
+  static int getPatch()
+  {
+    return HELLO_VERSION_PATCH;
+  }
 
-  /// @return the current ProjA version (MM.mm.pp).
-  static std::string getString();
+  /// @return the current ProjB version (MM.mm.pp).
+  static std::string getString()
+  {
+    std::ostringstream version;
+    version << HELLO_VERSION_MAJOR << '.' << HELLO_VERSION_MINOR << '.' << HELLO_VERSION_PATCH;
+    return version.str();
+  }
 
   /// @return the SVN revision.
-  static std::string getRevision();
+  static std::string getRevision()
+  {
+    return HELLO_VCS_REVISION;
+  }
 
-  /// @return the current ProjA version plus the SVN revision (MM.mm.pp.rev).
-  static std::string getRevString();
+  /// @return the current ProjB version plus the SVN revision (MM.mm.pp.rev).
+  static std::string getRevString()
+  {
+    std::ostringstream version;
+    version << getString() << '.' << HELLO_VCS_REVISION;
+    return version.str();
+  }
 };
 }
 }
