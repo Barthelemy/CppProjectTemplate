@@ -153,10 +153,12 @@ the source code to coding conventions. Clang has a number of predefined
 formatting rules but here we use a custom one. To use it one must first 
 install clang. 
 To run it on a single file and see the modified file content : 
+    
     clang-format -style=file <source file> # from the top directory
 
 To run it on all subdirectories and replace the content of the .cxx and .h
 files with the modified content : 
+
     find . -name *.cxx -o -name *.h | xargs clang-format -style=file -i
     
 
