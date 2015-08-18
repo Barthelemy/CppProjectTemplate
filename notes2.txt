@@ -10,4 +10,7 @@ https://github.com/scumm/foobar
 
 test make package -> doesn't work from top dir
 Test with two repos (projC and projD)
-lgpl
+
+- ALICE : package should install in /opt by default ?
+
+- ALL : Merge version in a header only class

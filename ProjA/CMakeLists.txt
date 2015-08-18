@@ -86,3 +86,5 @@ include(CPackConfig)
 # _____________________________________________________________________________
 
 include(PackageConfigurator)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/CPackConfig.cmake DESTINATION build)
