@@ -3,8 +3,8 @@
 /// @author  Barthelemy von Haller
 ///
 
-#ifndef PROJECT_TEMPLATE_HELLO_WORLD_H
-#define PROJECT_TEMPLATE_HELLO_WORLD_H
+#ifndef PROJECT_TEMPLATE_B_HELLO_WORLD_H
+#define PROJECT_TEMPLATE_B_HELLO_WORLD_H
 
 /// @brief    Here you put a short description of the namespace
 /// Extended documentation for this namespace
@@ -34,4 +34,4 @@ public:
 } // namespace Hello
 } // namespace ProjectTemplate
 
-#endif // PROJECT_TEMPLATE_HELLO_WORLD_H
+#endif // PROJECT_TEMPLATE_B_HELLO_WORLD_H

@@ -5,6 +5,7 @@
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/../cmake) # main (top) cmake dir
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake) # project specific cmake dir
+set(CMAKE_CXX_STANDARD 11) # tODO move up to a general cmake config for all sub projects ?
 
 # CMake useful variables
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
@@ -53,8 +54,10 @@ set(Boost_NO_BOOST_CMAKE ON) #  Don't do a find_package in config mode before se
 find_package(Boost COMPONENTS unit_test_framework program_options REQUIRED)
 
 # Find ProjA if we are compiling only ProjB
-if(NOT TARGET ProjA)
-  find_package(ProjA CONFIG REQUIRED)
+if(NOT TARGET ProjA) # target unknown because we build only this subproject, ProjA must have been built AND installed
+    find_package(ProjA CONFIG REQUIRED)
+else() # we know the target thus we are doing a build from the top directory
+    include_directories(../ProjA/include)
 endif()
 
 # This sets the include directory for the reference project. This is the -I flag in gcc.

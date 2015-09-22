@@ -4,6 +4,7 @@
 ///
 
 #include "ProjB/World.h"
+#include "ProjA/World.h"
 
 #include <iostream>
 
@@ -13,6 +14,9 @@ namespace ProjB {
 void World::greet()
 {
   std::cout << "ProjB world!!" << std::endl;
+
+  ProjectTemplate::ProjA::World projAWorld;
+  projAWorld.greet();
 }
 
 int World::returnsN(int n)
