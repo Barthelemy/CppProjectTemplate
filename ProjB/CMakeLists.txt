@@ -21,6 +21,8 @@ set(VERSION_MINOR "0")
 set(VERSION_PATCH "0")
 set(VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
 
+include(Common)
+
 # SVN (and its revision)
 #include(FindSubversion)
 #IF(Subversion_FOUND)
@@ -53,12 +55,8 @@ endif()
 set(Boost_NO_BOOST_CMAKE ON) #  Don't do a find_package in config mode before searching for a regular boost install.
 find_package(Boost COMPONENTS unit_test_framework program_options REQUIRED)
 
-# Find ProjA if we are compiling only ProjB
-if(NOT TARGET ProjA) # target unknown because we build only this subproject, ProjA must have been built AND installed
-    find_package(ProjA CONFIG REQUIRED)
-else() # we know the target thus we are doing a build from the top directory
-    include_directories(../ProjA/include)
-endif()
+# Find ProjA if we are compiling only ProjB otherwise reuse the targets
+add_dependent_subproject(ProjA)
 
 # This sets the include directory for the reference project. This is the -I flag in gcc.
 # All the includes should be in this variable To add new directories to the include path,
