@@ -68,16 +68,18 @@ You will find a sample one right next to this README. It is commented heavily fo
 #### The cmake way 
     
 The commands to build the project would be:
+``` 
     mkdir build_dir
     cd build_dir
     cmake .. 
     make 
     make install
+```
 Installation goes to /usr/local/ by default.
   
 #### More advanced way 
 
-To use it run "ccmake .." in the top
+To use it run `ccmake ..` in the top
 directory of the project. Then turn on the options that you want by
 going up and down with arrows, hitting "enter" to edit values and hitting
 it again to exit edition. 
@@ -87,8 +89,10 @@ makefile. It will bring you back to the terminal. Then type "make"
     
 One can also pass parameters to cmake when configuring it using "-DMY_VARIABLE VALUE".
 For example to build a debug version or a release version with debug symbols could look like : 
+```
     ccmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
     ccmake -DCMAKE_BUILD_TYPE=Debug ..
+```
 
 #### List of targets 
 
