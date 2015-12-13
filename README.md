@@ -61,7 +61,7 @@ just "include <xxx.h>" to avoid conflicts.
 
 ## CMake
 
-CMake(www.cmake.org) is the make tool we use in this project. 
+CMake (www.cmake.org) is the make tool we use in this project. 
 Its config file is a plain text file called CMakeLists.txt. 
 You will find a sample one right next to this README. It is commented heavily for reference.
 
@@ -90,8 +90,8 @@ makefile. It will bring you back to the terminal. Then type "make"
 One can also pass parameters to cmake when configuring it using "-DMY_VARIABLE VALUE".
 For example to build a debug version or a release version with debug symbols could look like : 
 ```
-    ccmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-    ccmake -DCMAKE_BUILD_TYPE=Debug ..
+    cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+    cmake -DCMAKE_BUILD_TYPE=Debug ..
 ```
 
 #### List of targets 
