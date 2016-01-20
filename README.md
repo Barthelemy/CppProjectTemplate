@@ -103,6 +103,9 @@ From the ./build or ./ProjX/build, one can call :
 * make doc
 * make package
 
+Important note : to be able to compile ProjB alone, one must first make and install ProjA. 
+Moreover, one must add to PATH and LD_LIBRARY_PATH the installation directory of ProjA.
+
 ## Docs (Doxygen)
 
 There is a default doc target in the CMakeLists.txt, which is built
