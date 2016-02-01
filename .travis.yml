@@ -11,8 +11,10 @@ compiler:
 addons:
   apt:
     packages:
-    - cmake
-    - libboost-all-dev
+      - cmake
+      - libboost-all-dev
+    sources:
+      - kalakris-cmake
 
 script:
  - cmake --version
