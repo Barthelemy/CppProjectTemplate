@@ -14,10 +14,11 @@ function(PrepareDocTarget)
   add_custom_target(${DOC_TARGET_NAME} ${TARGET_ALL}
       ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/documentation-config.doxygen
       WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-      COMMENT "Generating API documentation using doxygen" VERBATIM)
+      COMMENT "Generating API documentation using doxygen for ${PROJECT_NAME}" VERBATIM)
 
-  make_directory(${CMAKE_CURRENT_BINARY_DIR}/html) # needed for install
+  set(INSTALL_DOC_DIR ${CMAKE_BINARY_DIR}/doc/${PROJECT_NAME}/html)
+  file(MAKE_DIRECTORY ${INSTALL_DOC_DIR}) # needed for install
 
-  install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION share/${PROJECT_NAME}-${VERSION_MAJOR} COMPONENT doc)
+  install(DIRECTORY ${INSTALL_DOC_DIR} DESTINATION share/${PROJECT_NAME}-${VERSION_MAJOR} COMPONENT doc)
 
 endfunction()
