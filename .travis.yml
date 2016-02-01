@@ -17,6 +17,7 @@ addons:
 #      - george-edison55/cmake-3.x
 
 install:
+  # Freely inspired from https://github.com/boostorg/hana/blob/master/.travis.yml
   ############################################################################
   # All the dependencies are installed in ${TRAVIS_BUILD_DIR}/deps/
   ############################################################################
