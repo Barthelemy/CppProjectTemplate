@@ -1,11 +1,18 @@
 language: cpp
 sudo: false
 
+os:
+  - linux
+#  - osx https://docs.travis-ci.com/user/multi-os/
+
 compiler: 
  - gcc
   
-install: 
- - apt-get install libboost-all-dev
+addons:
+  apt:
+    packages:
+    - cmake
+    - libboost-all-dev
 
 script:
  - mkdir build 
