@@ -11,7 +11,7 @@ compiler:
 addons:
   apt:
     packages:
-#      - cmake
+      - graphviz
       - libboost-all-dev
 #    sources:
 #      - george-edison55/cmake-3.x
