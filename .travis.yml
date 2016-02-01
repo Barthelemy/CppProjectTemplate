@@ -58,5 +58,5 @@ script:
  - make install
  
 notifications:
-  email: false
+  email: true
  
