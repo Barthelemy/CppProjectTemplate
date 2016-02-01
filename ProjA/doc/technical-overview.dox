@@ -27,7 +27,7 @@
 	@endhtmlonly		
 	@section TECHNICAL_OVERVIEW_INTRODUCTION INTRODUCTION
 		@subsection Overview Overview
-			- Brief overview of the [PRODUCT_NAME]			
+			- Brief overview of the ProjA
 		@subsection Version Version
 			- Version
 		@subsection Status Status
