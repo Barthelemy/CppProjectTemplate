@@ -15,6 +15,7 @@ addons:
     - libboost-all-dev
 
 script:
+ - cmake --version
  - mkdir build 
  - cd build 
  - cmake -DCMAKE_BUILD_TYPE=Debug .. 
