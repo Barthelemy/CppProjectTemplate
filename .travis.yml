@@ -11,3 +11,7 @@ script:
  - make doc 
  - make test 
  - make install
+ 
+notifications:
+  email: false
+ 
