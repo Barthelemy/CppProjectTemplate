@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Barthelemy/CppProjectTemplate.svg?branch=master)](https://travis-ci.org/Barthelemy/CppProjectTemplate)
+
 This C++ project demonstrates the usage of CMake, boost's test, boost's option parsing and
 Doxygen. It is not the simplest example ever because we want to show how to use them
 in a proper non-minimalistic way. It also shows a way to structure the code and the other
