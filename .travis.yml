@@ -8,11 +8,11 @@ os:
 compiler: 
  - gcc
   
-#addons:
-#  apt:
-#    packages:
+addons:
+  apt:
+    packages:
 #      - cmake
-#      - libboost-all-dev
+      - libboost-all-dev
 #    sources:
 #      - george-edison55/cmake-3.x
 
@@ -34,10 +34,16 @@ install:
       brew install cmake
     fi
   ############################################################################
+  # Install a recent Doxygen
+  ############################################################################
+  - |
+    DOXYGEN_URL="http://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz"
+    mkdir doxygen && travis_retry wget --quiet -O - ${DOXYGEN_URL} | tar --strip-components=1 -xz -C doxygen
+    export PATH=${DEPS_DIR}/doxygen/bin:${PATH}
+  ############################################################################
   # Back to ${TRAVIS_BUILD_DIR}
   ############################################################################
   - cd ${TRAVIS_BUILD_DIR}
-
 
 script:
  - cmake --version
