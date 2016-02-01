@@ -1,7 +1,11 @@
 language: cpp
+sudo: false
 
 compiler: 
-  - gcc
+ - gcc
+  
+install: 
+ - apt-get install libboost-all-dev
 
 script:
  - mkdir build 
