@@ -15,6 +15,7 @@ compiler:
 #      - libboost-all-dev
 #    sources:
 #      - george-edison55/cmake-3.x
+
 install:
   ############################################################################
   # All the dependencies are installed in ${TRAVIS_BUILD_DIR}/deps/
@@ -32,6 +33,11 @@ install:
     else
       brew install cmake
     fi
+  ############################################################################
+  # Back to ${TRAVIS_BUILD_DIR}
+  ############################################################################
+  - cd ${TRAVIS_BUILD_DIR}
+
 
 script:
  - cmake --version
